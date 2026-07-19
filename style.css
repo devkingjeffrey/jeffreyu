@@ -159,6 +159,15 @@ a.brand-title:hover { color: var(--toe-red); }
 
 .profile-narrative strong { font-weight: 600; color: var(--text-primary); }
 
+.headshot-frame { margin-bottom: 2rem; overflow: hidden; }
+
+.headshot-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--grid-border);
+}
+
 .editorial-quote-card {
     background-color: var(--content-bg);
     border-top: 4px solid var(--toe-red);
