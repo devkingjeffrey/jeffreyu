@@ -75,12 +75,23 @@ a.brand-title:hover { color: var(--toe-red); }
 
 .page-container.narrow { max-width: 880px; }
 
+/* ---------- Shared editorial display face ----------
+   Same treatment for the hero name/tagline and every resized page heading
+   (What I Actually Do / How I Work / Illustrative Projects). Bold, tight,
+   condensed-feeling grotesque — matches the reference hero typography. */
+.editorial-display {
+    font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
 /* ---------- Hero (text-only, used on interior pages) ---------- */
 .hero-banner-text {
-    font-size: 3.5rem;
-    font-weight: 700;
+    font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    font-size: 2.25rem;
+    font-weight: 800;
     line-height: 1.15;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
     margin-bottom: 1.5rem;
     max-width: 960px;
 }
@@ -93,51 +104,78 @@ a.brand-title:hover { color: var(--toe-red); }
     margin-bottom: 5rem;
 }
 
-/* ---------- Full-bleed split Home hero (name/tagline + hero image) ---------- */
+/* ---------- Full-bleed Home hero — edge to edge, name/tagline overlaid ---------- */
 .home-hero {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    align-items: stretch;
-    gap: 0;
-    margin-bottom: 6rem;
-    border-bottom: 1px solid var(--grid-border);
-}
-
-.home-hero-text {
-    padding: 5rem 3rem;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    min-height: 640px;
+    background-color: var(--content-bg);
+    background-image:
+        linear-gradient(180deg, rgba(13,13,13,0.05) 0%, rgba(13,13,13,0.75) 100%),
+        url('Hero.jpg');
+    background-size: cover;
+    background-position: center;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 6rem;
+    /* light edges — soft inner glow instead of a hard frame/border */
+    box-shadow: inset 0 0 140px rgba(255,255,255,0.06);
 }
 
-.home-hero-text h1 {
+.home-hero-overlay {
+    padding: 4rem 3rem 4.5rem 3rem;
+    max-width: 780px;
+}
+
+.home-hero-overlay h1 {
+    font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
     font-size: 3.25rem;
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    font-weight: 800;
+    letter-spacing: -0.02em;
     line-height: 1.1;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.1rem;
 }
 
-.home-hero-text p {
+.home-hero-overlay p {
     font-size: 1.15rem;
     font-weight: 300;
     color: #e5e5ea;
     max-width: 480px;
 }
 
-.home-hero-image {
-    background-color: var(--content-bg);
-    background-image: url('Hero.jpg');
-    background-size: cover;
-    background-position: center;
-    min-height: 480px;
+/* Slide-in on page load/refresh */
+.hero-slide-in {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: heroSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-slide-in-1,
+.hero-slide-in-2 { animation-delay: 0.1s; }
+
+@keyframes heroSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-slide-in {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
 }
 
 @media (max-width: 960px) {
-    .home-hero { grid-template-columns: 1fr; }
-    .home-hero-text { padding: 3rem 1.5rem; }
-    .home-hero-image { min-height: 320px; }
+    .home-hero { min-height: 420px; }
+    .home-hero-overlay { padding: 2.5rem 1.5rem 3rem 1.5rem; }
+    .home-hero-overlay h1 { font-size: 2.25rem; }
 }
 
 /* ---------- Profile / About split ---------- */
@@ -590,7 +628,7 @@ footer.site-footer {
         grid-template-columns: 1fr;
         gap: 3.5rem;
     }
-    .hero-banner-text { font-size: 2.5rem; }
+    .hero-banner-text { font-size: 1.85rem; }
     .ecosystem-summary-panel { grid-column: span 1; }
     .main-navigation { display: none; }
     header.site-header { padding: 2rem 1.5rem; }
