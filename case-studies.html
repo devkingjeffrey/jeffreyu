@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header class="site-header">
         <a href="index.html" class="brand-title">Jeffrey Uwoghiren</a>
         <ul class="main-navigation">
@@ -18,14 +19,19 @@
             <li><a href="index.html#consult">Consult</a></li>
         </ul>
     </header>
+
     <main class="page-container">
+
         <section>
             <div class="hero-banner-text">Selected Work.</div>
         </section>
+
         <div class="page-intro-note">
             These three are illustrative builds — worked through in detail based on real patterns I've researched, not completed client engagements. Labeled honestly here rather than presented as finished projects. Real case studies replace these as they happen.
         </div>
+
         <section class="showcase-grid-layout" style="margin-bottom: 4rem;">
+
             <div class="showcase-item-card">
                 <h3><a href="#">Optimizing Pipeline Architecture to Eliminate Lead Leakage</a></h3>
                 <div class="showcase-item-meta">
@@ -33,6 +39,7 @@
                     <span class="meta-context-tag">Illustrative</span>
                 </div>
             </div>
+
             <div class="showcase-item-card">
                 <h3><a href="#reconciliation-build">Reconciling Multi-Branch Donor & Partner Data Across a National NGO Network</a></h3>
                 <div class="showcase-item-meta">
@@ -40,26 +47,32 @@
                     <a href="#reconciliation-build" class="action-trigger-link">READ CASE »</a>
                 </div>
             </div>
+
             <div class="showcase-item-card">
-                <h3><a href="#">Automating Client Onboarding with HubSpot-to-Slack Integrations</a></h3>
+                <h3><a href="#grant-compliance-build">Milestone-Gated Fund Release for a Multi-Country Grant Cycle</a></h3>
                 <div class="showcase-item-meta">
-                    <span class="meta-context-tag">HubSpot / Integrations</span>
-                    <span class="meta-context-tag">Illustrative</span>
+                    <span class="meta-context-tag">Salesforce NPSP</span>
+                    <a href="#grant-compliance-build" class="action-trigger-link">READ CASE »</a>
                 </div>
             </div>
+
         </section>
+
         <section id="reconciliation-build" style="margin-bottom: 6rem;">
             <div class="section-header-label">Illustrative Project — Not a Completed Client Engagement</div>
+
             <div class="pattern-panel" style="grid-template-columns: 1fr;">
                 <div>
                     <h3>Reconciling Multi-Branch Donor & Partner Data Across a National NGO Network</h3>
                     <p style="color: var(--toe-red); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2rem;">
                         Built from real, recurring patterns observed across national and pan-African NGOs — not a real client, not real data. Labeled honestly rather than presented as finished work.
                     </p>
+
                     <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;">The Situation</h4>
                     <p>
                         A composite, typical of what shows up across national NGOs with semi-autonomous branches: a secretariat in Abuja running programmes through a dozen-plus state or regional chapters, each reporting on whatever tool was locally available — one branch on spreadsheets, another on a paper log transcribed monthly, a couple on a shared drive with no shared format. A donor reporting deadline arrives, and the secretariat's programme team spends days manually reconciling submissions that don't share field names, date formats, or even currency conventions, before anyone can produce one clean number for a funder.
                     </p>
+
                     <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">The Architecture</h4>
                     <p>
                         Built on Salesforce Non-Profit Success Pack (NPSP), structured around the Household/Organization Account model already native to NPSP — the national secretariat as a parent Account, each branch or partner as a child Account linked through the standard Account hierarchy, so branch-level activity rolls up to a single national view without losing branch-level detail.
@@ -73,6 +86,7 @@
                     <p>
                         Reporting sits on top of this as report types and dashboards scoped by branch, region, or donor — giving the secretariat one live, consolidated view instead of a manual roll-up exercise every reporting cycle.
                     </p>
+
                     <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">What This Would Change</h4>
                     <p>
                         Framed as expected outcomes of the architecture, not measured results of a real engagement: reconciliation before a donor report shifts from a manual, multi-day cross-check to a live report anyone on the team can pull. Duplicate donor and grant records stop accumulating silently across branches. And the secretariat gains a single source of truth it can hand to an auditor or funder without needing to explain which spreadsheet is the "real" one.
@@ -80,7 +94,43 @@
                 </div>
             </div>
         </section>
+
+        <section id="grant-compliance-build" style="margin-bottom: 6rem;">
+            <div class="section-header-label">Illustrative Project — Not a Completed Client Engagement</div>
+
+            <div class="pattern-panel" style="grid-template-columns: 1fr;">
+                <div>
+                    <h3>Milestone-Gated Fund Release for a Multi-Country Grant Cycle</h3>
+                    <p style="color: var(--toe-red); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2rem;">
+                        Built from real, recurring patterns observed across grant-making and fellowship-running NGOs — not a real client, not real data. Labeled honestly rather than presented as finished work.
+                    </p>
+
+                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;">The Situation</h4>
+                    <p>
+                        A composite, typical of an organization running a grant cycle or fellowship where sub-grantees or cohort members are spread across several countries or regions, and funds are meant to release only as each recipient hits a defined milestone. In practice, the compliance team is stuck manually checking uploaded reports against a spreadsheet of milestone criteria before every disbursement, and different program officers apply the criteria slightly differently — some recipients get paid before their documentation is actually complete, others get held up for reasons that were never written down anywhere consistent.
+                    </p>
+
+                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">The Architecture</h4>
+                    <p>
+                        Built on Salesforce NPSP, with each grant or fellowship modeled as an Opportunity (or a custom Grant object where the standard Opportunity fields don't fit cleanly), broken into stages that mirror the actual milestone structure — application, approval, milestone 1 delivered, milestone 2 delivered, closed. Each stage transition is gated by an Approval Process, so a disbursement can't move forward until the required documentation fields are populated and a reviewer has formally signed off — replacing "did someone remember to check" with a rule the system enforces every time.
+                    </p>
+                    <p>
+                        Validation rules on the milestone fields catch incomplete submissions before they ever reach a reviewer's queue, and a Flow handles the notification side — automatically alerting the program officer and the recipient's point of contact the moment a stage changes, instead of relying on someone remembering to send an update email.
+                    </p>
+                    <p>
+                        Because every grantee sits on a standard Account/Contact structure, the same reporting layer used for donor-side reconciliation (see the pattern above) applies here too — a dashboard showing exactly which recipients are pending, approved, or paid, filterable by country, cohort, or funding source.
+                    </p>
+
+                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">What This Would Change</h4>
+                    <p>
+                        Framed as expected outcomes of the architecture, not measured results of a real engagement: milestone criteria stop living in one compliance officer's head or a personal spreadsheet, and instead become a rule the system applies the same way every time. Disbursement timing becomes consistent across program officers rather than varying by who's reviewing the file. And when a donor or auditor asks "show me exactly why this recipient was paid on this date," there's a system-enforced approval trail to point to, not a reconstructed explanation after the fact.
+                    </p>
+                </div>
+            </div>
+        </section>
+
     </main>
+
     <footer class="site-footer" id="consult">
         <div>
             <div class="footer-column-title">Communications Network</div>
@@ -94,5 +144,6 @@
             <a href="https://2gney8.share-eu1.hsforms.com/2RWfmfgoYSVKW5AHld2Sk1Q" target="_blank" class="primary-action-button">Initiate System Consult</a>
         </div>
     </footer>
+
 </body>
 </html>
