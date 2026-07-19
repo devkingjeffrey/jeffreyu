@@ -30,7 +30,7 @@
             These three are illustrative builds — worked through in detail based on real patterns I've researched, not completed client engagements. Labeled honestly here rather than presented as finished projects. Real case studies replace these as they happen.
         </div>
 
-        <section class="showcase-grid-layout" style="margin-bottom: 4rem;">
+        <section class="showcase-grid-layout" style="margin-bottom: 4rem; grid-template-columns: repeat(2, 1fr);">
 
             <div class="showcase-item-card">
                 <h3><a href="#onboarding-build">Automating Multi-Site Staff Onboarding During a Hiring Surge</a></h3>
@@ -56,6 +56,14 @@
                 </div>
             </div>
 
+            <div class="showcase-item-card">
+                <h3><a href="#field-data-build">Secure Field Data Capture Without Reliable Connectivity</a></h3>
+                <div class="showcase-item-meta">
+                    <span class="meta-context-tag">Salesforce Platform</span>
+                    <a href="#field-data-build" class="action-trigger-link">READ CASE »</a>
+                </div>
+            </div>
+
         </section>
 
         <section id="reconciliation-build" style="margin-bottom: 6rem;">
@@ -65,7 +73,7 @@
                 <div>
                     <h3>Reconciling Multi-Branch Donor & Partner Data Across a National NGO Network</h3>
                     <p style="color: var(--toe-red); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2rem;">
-                        Built from real, recurring patterns observed across national and pan-African NGOs — not a real client, not real data. Labeled honestly rather than presented as finished work.
+                        Built from real, recurring patterns observed across national and pan-African NGOs — not a real client, not real data.
                     </p>
 
                     <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;">The Situation</h4>
@@ -102,7 +110,7 @@
                 <div>
                     <h3>Milestone-Gated Fund Release for a Multi-Country Grant Cycle</h3>
                     <p style="color: var(--toe-red); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2rem;">
-                        Built from real, recurring patterns observed across grant-making and fellowship-running NGOs — not a real client, not real data. Labeled honestly rather than presented as finished work.
+                        Built from real, recurring patterns observed across grant-making and fellowship-running NGOs — not a real client, not real data.
                     </p>
 
                     <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;">The Situation</h4>
@@ -136,7 +144,7 @@
                 <div>
                     <h3>Automating Multi-Site Staff Onboarding During a Hiring Surge</h3>
                     <p style="color: var(--toe-red); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2rem;">
-                        Built from real, recurring patterns observed across NGOs scaling personnel across multiple sites at once — not a real client, not real data. Labeled honestly rather than presented as finished work.
+                        Built from real, recurring patterns observed across NGOs scaling personnel across multiple sites at once — not a real client, not real data.
                     </p>
 
                     <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;">The Situation</h4>
@@ -158,6 +166,40 @@
                     <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">What This Would Change</h4>
                     <p>
                         Framed as expected outcomes of the architecture, not measured results of a real engagement: new hires stop starting before their access and equipment are ready, because the workflow surfaces the gap automatically instead of relying on someone remembering to follow up. HR gains one live view across all sites instead of piecing status together from inboxes. And the handoffs between HR, IT, and site leads happen on a system-enforced trigger, not a manually-sent email that might get missed during a hiring surge.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="field-data-build" style="margin-bottom: 6rem;">
+            <div class="section-header-label">Illustrative Project — Not a Completed Client Engagement</div>
+
+            <div class="pattern-panel" style="grid-template-columns: 1fr;">
+                <div>
+                    <h3>Secure Field Data Capture Without Reliable Connectivity</h3>
+                    <p style="color: var(--toe-red); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2rem;">
+                        Built from real, recurring patterns observed across NGOs collecting sensitive data in the field — not a real client, not real data.
+                    </p>
+
+                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;">The Situation</h4>
+                    <p>
+                        A composite, typical of an org whose field staff collect sensitive case data — protection intake, legal casework, health records — in locations with unreliable internet, sometimes none at all. Today that means paper forms photographed and messaged in later, or a spreadsheet filled in from memory once someone's back at the office with signal. Details get lost or misremembered in the gap, and sensitive information sits unprotected on a phone's camera roll or a messaging app in the meantime.
+                    </p>
+
+                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">The Architecture</h4>
+                    <p>
+                        Built using the Salesforce Mobile App with offline-capable forms — field staff fill in a structured record on their phone or tablet exactly as they would on paper, but the data is captured as clean, structured fields from the start rather than free text to be re-typed later. The device stores the record locally when there's no signal, and syncs automatically the moment a connection is available — no manual re-entry step, and nothing sits exposed in a messaging app while it waits to reach the system.
+                    </p>
+                    <p>
+                        Field-level security and permission sets restrict who can see sensitive record types, so a case file is only visible to the people who actually need it — a basic but often-skipped control when data collection happens under time pressure in the field.
+                    </p>
+                    <p>
+                        Once synced, the same record structure feeds directly into whatever reporting or case-tracking view the org already relies on, so field data doesn't need a separate manual transcription step to become usable centrally.
+                    </p>
+
+                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">What This Would Change</h4>
+                    <p>
+                        Framed as expected outcomes of the architecture, not measured results of a real engagement: field staff capture cleaner data on the spot instead of reconstructing it from memory hours later. Sensitive records stay inside a permissioned system instead of living temporarily in a camera roll or chat thread. And headquarters gets usable, structured data the moment a device reconnects, instead of waiting on someone to manually transcribe a stack of photographed forms.
                     </p>
                 </div>
             </div>
