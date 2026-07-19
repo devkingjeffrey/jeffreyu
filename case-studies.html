@@ -33,10 +33,10 @@
         <section class="showcase-grid-layout" style="margin-bottom: 4rem;">
 
             <div class="showcase-item-card">
-                <h3><a href="#">Optimizing Pipeline Architecture to Eliminate Lead Leakage</a></h3>
+                <h3><a href="#onboarding-build">Automating Multi-Site Staff Onboarding During a Hiring Surge</a></h3>
                 <div class="showcase-item-meta">
                     <span class="meta-context-tag">HubSpot / Automation</span>
-                    <span class="meta-context-tag">Illustrative</span>
+                    <a href="#onboarding-build" class="action-trigger-link">READ CASE »</a>
                 </div>
             </div>
 
@@ -124,6 +124,40 @@
                     <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">What This Would Change</h4>
                     <p>
                         Framed as expected outcomes of the architecture, not measured results of a real engagement: milestone criteria stop living in one compliance officer's head or a personal spreadsheet, and instead become a rule the system applies the same way every time. Disbursement timing becomes consistent across program officers rather than varying by who's reviewing the file. And when a donor or auditor asks "show me exactly why this recipient was paid on this date," there's a system-enforced approval trail to point to, not a reconstructed explanation after the fact.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="onboarding-build" style="margin-bottom: 6rem;">
+            <div class="section-header-label">Illustrative Project — Not a Completed Client Engagement</div>
+
+            <div class="pattern-panel" style="grid-template-columns: 1fr;">
+                <div>
+                    <h3>Automating Multi-Site Staff Onboarding During a Hiring Surge</h3>
+                    <p style="color: var(--toe-red); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2rem;">
+                        Built from real, recurring patterns observed across NGOs scaling personnel across multiple sites at once — not a real client, not real data. Labeled honestly rather than presented as finished work.
+                    </p>
+
+                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;">The Situation</h4>
+                    <p>
+                        A composite, typical of an org hiring rapidly across several offices or field sites at once — a central HR lead trying to onboard new staff into multiple locations in parallel, with each site's paperwork, equipment provisioning, and system access requests tracked over email threads. New hires start before their access is ready, HR loses track of who's actually been fully onboarded versus who's still mid-process, and nobody has one place to see status across all sites at a glance.
+                    </p>
+
+                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">The Architecture</h4>
+                    <p>
+                        Built on HubSpot, using a custom onboarding pipeline (built on Deals or a custom object, depending on the account tier) with a stage for every step of the process — offer signed, documentation received, IT/systems access requested, site orientation scheduled, fully onboarded. Each stage change triggers a Workflow that automatically notifies the relevant party — IT when access needs provisioning, the site lead when someone's ready for orientation — instead of HR manually chasing each handoff by email.
+                    </p>
+                    <p>
+                        A Slack integration mirrors key stage changes into a shared onboarding channel, so anyone on the team can see status in real time without opening HubSpot directly — the same "default to open and visual" principle that shows up elsewhere in how the org already wants to operate.
+                    </p>
+                    <p>
+                        A simple dashboard rolls up onboarding status by site, giving HR one view of exactly who's stuck at which stage across every location, instead of reconstructing that picture from separate email threads each time someone asks.
+                    </p>
+
+                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">What This Would Change</h4>
+                    <p>
+                        Framed as expected outcomes of the architecture, not measured results of a real engagement: new hires stop starting before their access and equipment are ready, because the workflow surfaces the gap automatically instead of relying on someone remembering to follow up. HR gains one live view across all sites instead of piecing status together from inboxes. And the handoffs between HR, IT, and site leads happen on a system-enforced trigger, not a manually-sent email that might get missed during a hiring surge.
                     </p>
                 </div>
             </div>
