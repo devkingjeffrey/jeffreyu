@@ -23,14 +23,14 @@
     <main class="page-container">
 
         <section>
-            <div class="hero-banner-text">Selected Work.</div>
+            <div class="hero-banner-text">Illustrative Projects.</div>
         </section>
 
         <div class="page-intro-note">
-            These three are illustrative builds — worked through in detail based on real patterns I've researched, not completed client engagements. Labeled honestly here rather than presented as finished projects. Real case studies replace these as they happen.
+            Worked through in detail based on real patterns I've researched.
         </div>
 
-        <section class="showcase-grid-layout" style="margin-bottom: 4rem; grid-template-columns: repeat(2, 1fr);">
+        <section class="showcase-grid-layout" style="margin-bottom: 4rem; grid-template-columns: repeat(3, 1fr);">
 
             <div class="showcase-item-card">
                 <h3><a href="#onboarding-build">Automating Multi-Site Staff Onboarding During a Hiring Surge</a></h3>
@@ -61,6 +61,22 @@
                 <div class="showcase-item-meta">
                     <span class="meta-context-tag">Salesforce Platform</span>
                     <a href="#field-data-build" class="action-trigger-link">READ CASE »</a>
+                </div>
+            </div>
+
+            <div class="showcase-item-card">
+                <h3><a href="#screening-build">Automated Application Screening for a High-Volume Grant Cycle</a></h3>
+                <div class="showcase-item-meta">
+                    <span class="meta-context-tag">Salesforce NPSP</span>
+                    <a href="#screening-build" class="action-trigger-link">READ CASE »</a>
+                </div>
+            </div>
+
+            <div class="showcase-item-card">
+                <h3><a href="#alumni-build">Tracking Alumni & Long-Term Stakeholder Relationships Through Staff Turnover</a></h3>
+                <div class="showcase-item-meta">
+                    <span class="meta-context-tag">Salesforce NPSP</span>
+                    <a href="#alumni-build" class="action-trigger-link">READ CASE »</a>
                 </div>
             </div>
 
@@ -200,6 +216,74 @@
                     <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">What This Would Change</h4>
                     <p>
                         Framed as expected outcomes of the architecture, not measured results of a real engagement: field staff capture cleaner data on the spot instead of reconstructing it from memory hours later. Sensitive records stay inside a permissioned system instead of living temporarily in a camera roll or chat thread. And headquarters gets usable, structured data the moment a device reconnects, instead of waiting on someone to manually transcribe a stack of photographed forms.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="screening-build" style="margin-bottom: 6rem;">
+            <div class="section-header-label">Illustrative Project — Not a Completed Client Engagement</div>
+
+            <div class="pattern-panel" style="grid-template-columns: 1fr;">
+                <div>
+                    <h3>Automated Application Screening for a High-Volume Grant Cycle</h3>
+                    <p style="color: var(--toe-red); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2rem;">
+                        Built from real, recurring patterns observed across NGOs running large-scale grant cycles, fellowships, and mentorship programs — not a real client, not real data.
+                    </p>
+
+                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;">The Situation</h4>
+                    <p>
+                        A composite, typical of an org running an annual grant cycle, fellowship, or mentorship program that draws thousands of applications. Every cycle, a small program team manually opens each submission to check basic eligibility — right country, right sector, required documents attached, budget within range — before anyone with real judgment even sees it. Reviewers' time goes to sorting instead of evaluating, and the cycle takes weeks longer than it should before a shortlist exists.
+                    </p>
+
+                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">The Architecture</h4>
+                    <p>
+                        Built on Salesforce NPSP, with applications captured directly into the system through a web-to-lead style form rather than arriving as email attachments to be manually logged. A Flow runs an initial eligibility check against the structured fields the moment a submission comes in — required documents present, eligibility criteria met, budget within stated bounds — and automatically routes anything that fails a hard criterion to a rejection queue with the reason attached, rather than a reviewer discovering it three steps into reading the file.
+                    </p>
+                    <p>
+                        Everything that passes the initial check lands in a reviewer queue, assigned automatically by sector or region using assignment rules, so applications get distributed evenly instead of piling up with whoever happens to check their inbox first.
+                    </p>
+                    <p>
+                        For programs that need mentor/mentee or reviewer/applicant matching specifically, the same structured data — sector, seniority, stated goals — feeds a simple scoring or filtering view that surfaces the closest matches, cutting down the manual cross-referencing that pairing usually requires.
+                    </p>
+
+                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">What This Would Change</h4>
+                    <p>
+                        Framed as expected outcomes of the architecture, not measured results of a real engagement: reviewers spend their time judging genuinely eligible applications instead of screening out ones that were never going to qualify. The shortlist stage starts sooner because eligibility is checked the moment a form is submitted, not batched into a manual review pass weeks later. And every rejected applicant has a clear, consistent reason on file, rather than an inconsistent judgment call made under time pressure.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="alumni-build" style="margin-bottom: 6rem;">
+            <div class="section-header-label">Illustrative Project — Not a Completed Client Engagement</div>
+
+            <div class="pattern-panel" style="grid-template-columns: 1fr;">
+                <div>
+                    <h3>Tracking Alumni & Long-Term Stakeholder Relationships Through Staff Turnover</h3>
+                    <p style="color: var(--toe-red); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2rem;">
+                        Built from real, recurring patterns observed across NGOs running leadership programs, fellowships, and alumni networks — not a real client, not real data.
+                    </p>
+
+                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;">The Situation</h4>
+                    <p>
+                        A composite, typical of an org running a leadership program, fellowship, or long-standing donor network where the real value is in relationships tracked over years, not months. The person who knew "this graduate moved into a policy role two years after the program" or "this donor's last three gifts were tied to a specific project" leaves the org, and that context leaves with them — because it lived in their personal notes or memory, not in a shared system. A funder asks for multi-year impact evidence, and the answer depends on who's still around to remember it.
+                    </p>
+
+                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">The Architecture</h4>
+                    <p>
+                        Built on Salesforce NPSP, using the standard Contact and Relationship objects to track not just a person's basic details but their ongoing story — career moves, engagement history, gift history, program milestones — all logged as Activities or custom timeline records tied to their Contact record, rather than living in one staff member's inbox or notebook.
+                    </p>
+                    <p>
+                        Simple automation (Flow-based reminders) prompts staff to log a check-in or update after key touchpoints — a conference encounter, a career update heard secondhand, a renewed gift — so the record stays current without depending on any one person's memory or diligence.
+                    </p>
+                    <p>
+                        Reporting rolls this up into a longitudinal view — career trajectories across a cohort, gift patterns across years — that a program director can pull directly, instead of reconstructing it by asking around the office.
+                    </p>
+
+                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">What This Would Change</h4>
+                    <p>
+                        Framed as expected outcomes of the architecture, not measured results of a real engagement: institutional memory survives staff turnover because it lives in the system, not in someone's head. Multi-year impact evidence becomes a report you can generate on demand instead of a research project every time a funder asks. And relationship history stops depending on which staff member happens to remember a particular donor or graduate.
                     </p>
                 </div>
             </div>
