@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jeffrey O. Uwoghiren</title>
+    <style>
+        /* ==========================================================================
+           TONY ELUMELU SITE REWRITE — CORE LAYOUT ENGINE & LOOK AND FEEL
+           ========================================================================== */
+        
+        :root {
+            --global-bg: #0d0d0d;         /* True TOE Matte Background */
+            --content-bg: #141414;        /* Card Content Structural Inset */
+            --text-primary: #ffffff;      /* High-Contrast Corporate Typography */
+            --text-muted: #8e8e93;        /* Sub-Header Reference Text */
+            --toe-red: #e31b23;           /* Signature Executive Accent */
+            --grid-border: #222222;       /* Razor-Thin Element Separators */
+            --site-max-width: 1140px;     /* Core Container Bounds */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--global-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            padding: 0 1.5rem;
+        }
+
+        /* Site Header Configuration */
+        header.site-header {
+            max-width: var(--site-max-width);
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--grid-border);
+        }
+
+        .brand-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .main-navigation {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .main-navigation a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            transition: color 0.2s ease;
+        }
+
+        .main-navigation a:hover,
+        .main-navigation li.active a {
+            color: var(--text-primary);
+        }
+
+        /* Container & Structural Layout Engine */
+        .page-container {
+            max-width: var(--site-max-width);
+            margin: 5rem auto 0 auto;
+        }
+
+        /* Editorial Bold Title Section */
+        .hero-banner-text {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 5rem;
+            max-width: 960px;
+        }
+
+        /* Profile Split Section */
+        .profile-split-wrapper {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 5rem;
+            margin-bottom: 7rem;
+            align-items: start;
+        }
+
+        .profile-narrative p {
+            font-size: 1.1rem;
+            color: #e5e5ea;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            text-align: justify;
+        }
+
+        .profile-narrative strong {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Callout / Sidebar Block Styling */
+        .editorial-quote-card {
+            background-color: var(--content-bg);
+            border-top: 4px solid var(--toe-red);
+            padding: 3rem 2rem;
+        }
+
+        .editorial-quote-card h4 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--toe-red);
+            margin-bottom: 1.25rem;
+        }
+
+        .quote-content {
+            font-style: italic;
+            font-size: 1.15rem;
+            line-height: 1.5;
+            color: var(--text-primary);
+        }
+
+        /* Grid Content Rows Configuration */
+        .section-header-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            border-bottom: 1px solid var(--grid-border);
+            padding-bottom: 1rem;
+        }
+
+        .framework-matrix-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 7rem;
+        }
+
+        .matrix-box {
+            border: 1px solid var(--grid-border);
+            background-color: var(--content-bg);
+            padding: 3rem;
+        }
+
+        .matrix-box h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .matrix-box ul {
+            list-style: none;
+        }
+
+        .matrix-box li {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .matrix-box li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--toe-red);
+        }
+
+        /* Ecosystem Status Bar */
+        .ecosystem-summary-panel {
+            grid-column: span 2;
+            border: 1px solid var(--grid-border);
+            padding: 3rem;
+            background: linear-gradient(180deg, #141414 0%, #0d0d0d 100%);
+        }
+
+        .ecosystem-summary-panel h4 {
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--toe-red);
+        }
+
+        .ecosystem-summary-panel p {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: #d1d1d6;
+        }
+
+        /* Reconciliation Tax — single-pattern feature section (replaces 4-pillar grid on homepage) */
+        .pattern-panel {
+            border: 1px solid var(--grid-border);
+            background-color: var(--content-bg);
+            padding: 3.5rem;
+            margin-bottom: 7rem;
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .pattern-panel h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-bottom: 1.5rem;
+        }
+
+        .pattern-panel p {
+            font-size: 1.05rem;
+            color: #d1d1d6;
+            font-weight: 300;
+            margin-bottom: 1.25rem;
+        }
+
+        .pattern-signals h4 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--toe-red);
+            margin-bottom: 1.25rem;
+        }
+
+        .pattern-signals ul { list-style: none; }
+
+        .pattern-signals li {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .pattern-signals li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--toe-red);
+        }
+
+        @media (max-width: 960px) {
+            .pattern-panel { grid-template-columns: 1fr; gap: 2.5rem; }
+        }
+
+        /* Case Studies Grid Block System */
+        .showcase-grid-layout {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-bottom: 8rem;
+        }
+
+        .showcase-item-card {
+            border-bottom: 1px solid var(--grid-border);
+            padding-bottom: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .showcase-item-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.45;
+            margin-bottom: 2rem;
+        }
+
+        .showcase-item-card h3 a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .showcase-item-card h3 a:hover {
+            color: var(--text-muted);
+        }
+
+        .showcase-item-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .meta-context-tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            font-weight: 700;
+        }
+
+        .action-trigger-link {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            color: var(--toe-red);
+            text-decoration: none;
+            font-weight: 700;
+            transition: opacity 0.2s ease;
+        }
+
+        .action-trigger-link:hover {
+            opacity: 0.8;
+        }
+
+        /* Structural Institutional Footer */
+        footer.site-footer {
+            max-width: var(--site-max-width);
+            margin: 0 auto 7rem auto;
+            border-top: 1px solid var(--grid-border);
+            padding-top: 5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .footer-column-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .footer-directory-links a {
+            display: inline-block;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin-bottom: 1.25rem;
+            margin-right: 2.5rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-directory-links a:hover {
+            color: var(--toe-red);
+        }
+
+        .footer-action-panel {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .primary-action-button {
+            display: inline-block;
+            background-color: var(--toe-red);
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 1.25rem 3.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.8rem;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .primary-action-button:hover {
+            background-color: #be1218;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Breakpoint Adaptations */
+        @media (max-width: 960px) {
+            .profile-split-wrapper, .framework-matrix-grid, .showcase-grid-layout, footer.site-footer { 
+                grid-template-columns: 1fr; 
+                gap: 3.5rem; 
+            }
+            .hero-banner-text { font-size: 2.5rem; }
+            .ecosystem-summary-panel { grid-column: span 1; }
+            .main-navigation { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Unified Corporate Nav Module -->
+    <header class="site-header">
+        <div class="brand-title">Jeffrey O. Uwoghiren</div>
+        <ul class="main-navigation">
+            <li class="active"><a href="#">Overview</a></li>
+            <li><a href="#reconciliation-tax">The Reconciliation Tax</a></li>
+            <li><a href="#case-documentation">Case Documentation</a></li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="#consult">System Consult</a></li>
+        </ul>
+    </header>
+
+    <main class="page-container">
+        
+        <!-- Premium Visual Statement Block -->
+        <section class="hero-banner-text">
+            I build high-efficiency CRM architectures for growing businesses.
+        </section>
+
+        <!-- Dynamic Two-Column Layout Segment -->
+        <section class="profile-split-wrapper">
+            <div class="profile-narrative">
+                <p>
+                    Jeffrey Uwoghiren is a CRM architect and process automation specialist focused on one recurring problem: the hours organizations lose reconciling data by hand once they've outgrown the systems tracking it. He works primarily with growing NGOs and businesses navigating scale-ups, rebrands, and new partner networks — the exact moments this problem shows up.
+                </p>
+                <p>
+                    He designs and deploys practical architecture on the Salesforce and HubSpot platforms, with a particular focus on donor, partner, and pipeline data staying consistent and reportable as an organization grows — not just clean once, but built to stay that way.
+                </p>
+                <p>
+                    He's also building <strong>Apex Flow</strong>, a process automation practice, and documents what he learns along the way — real patterns from real organizations, not theory.
+                </p>
+            </div>
+            <div class="editorial-quote-card">
+                <h4>Working Philosophy</h4>
+                <div class="quote-content">
+                    "The hardest part of scaling isn't the growth itself — it's the reconciliation tax that comes due the moment your systems stop keeping up with it."
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Pattern Section — the Reconciliation Tax -->
+        <section id="reconciliation-tax">
+            <div class="section-header-label">The Core Pattern</div>
+            <div class="pattern-panel">
+                <div>
+                    <h3>The Reconciliation Tax</h3>
+                    <p>
+                        There's a hidden cost most growing organizations never put a line item on. It's not fraud, and it's not incompetence — it's just what happens when an organization scales faster than the systems tracking it. A new grant here, a new state office there, a new partner added to a coalition. Each one adds a spreadsheet, a shared drive, a slightly different format.
+                    </p>
+                    <p>
+                        Nobody notices the tax being paid until someone has to close the books, and three different versions of the "same" number show up. That's not a data problem — it's a growth problem wearing a data costume.
+                    </p>
+                    <p>
+                        This is the pattern I focus on: keeping donor, partner, and programme data consistent and reportable through the exact moments — scale-ups, rebrands, new coalitions — when it's most likely to fall apart.
+                    </p>
+                </div>
+                <div class="pattern-signals">
+                    <h4>Where This Shows Up</h4>
+                    <ul>
+                        <li>A rebrand or structural shift, with years of data still living under the old format</li>
+                        <li>Joining a coalition or partner network, where case data starts living in more places at once</li>
+                        <li>A hiring push or new tender for reporting tools — a sign the gap's been noticed</li>
+                        <li>A cohort or fellowship model outgrowing the spreadsheet that worked fine at the start</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ecosystem-summary-panel" style="margin-bottom: 7rem;">
+                <h4>Current Infrastructure Deployment Focus</h4>
+                <p>— Salesforce Platform & Non-Profit Success Pack (NPSP) Architecture</p>
+                <p>— HubSpot Advanced Automation & Pipeline Configurations</p>
+                <p>— Custom Declarative Webhook & Slack Team Integrations</p>
+            </div>
+        </section>
+
+        <!-- Project Case Study Matrix -->
+        <section id="case-documentation">
+            <div class="section-header-label">Selected Case Documentation</div>
+            <div class="showcase-grid-layout">
+                
+                <div class="showcase-item-card">
+                    <h3><a href="#">Optimizing Pipeline Architecture to Eliminate Lead Leakage</a></h3>
+                    <div class="showcase-item-meta">
+                        <span class="meta-context-tag">HubSpot / Automation</span>
+                        <a href="#" class="action-trigger-link">READ CASE »</a>
+                    </div>
+                </div>
+
+                <div class="showcase-item-card">
+                    <h3><a href="#">Structuring Role Hierarchies & Sharing Rules for Multi-Territory Sales Teams</a></h3>
+                    <div class="showcase-item-meta">
+                        <span class="meta-context-tag">Salesforce Platform</span>
+                        <a href="#" class="action-trigger-link">READ CASE »</a>
+                    </div>
+                </div>
+
+                <div class="showcase-item-card">
+                    <h3><a href="#">Automating Client Onboarding with HubSpot-to-Slack Integrations</a></h3>
+                    <div class="showcase-item-meta">
+                        <span class="meta-context-tag">HubSpot / Integrations</span>
+                        <a href="#" class="action-trigger-link">READ CASE »</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Structural Footer Module -->
+    <footer class="site-footer" id="consult">
+        <div>
+            <div class="footer-column-title">Communications Network</div>
+            <div class="footer-directory-links">
+                <a href="mailto:jeffreyuwoghiren@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/jeffrey-uwoghiren-63b48b378/" target="_blank">LinkedIn</a>
+                <a href="https://x.com/Its_Imiefan" target="_blank">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-action-panel">
+            <a href="https://2gney8.share-eu1.hsforms.com/2RWfmfgoYSVKW5AHld2Sk1Q" target="_blank" class="primary-action-button">Initiate System Consult</a>
+        </div>
+    </footer>
+
+</body>
+</html>
