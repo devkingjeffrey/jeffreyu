@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header class="site-header">
         <a href="index.html" class="brand-title">Jeffrey Uwoghiren</a>
         <ul class="main-navigation">
@@ -19,19 +18,14 @@
             <li><a href="index.html#consult">Consult</a></li>
         </ul>
     </header>
-
     <main class="page-container">
-
         <section>
             <div class="hero-banner-text">Selected Work.</div>
         </section>
-
         <div class="page-intro-note">
             These three are illustrative builds — worked through in detail based on real patterns I've researched, not completed client engagements. Labeled honestly here rather than presented as finished projects. Real case studies replace these as they happen.
         </div>
-
         <section class="showcase-grid-layout" style="margin-bottom: 4rem;">
-
             <div class="showcase-item-card">
                 <h3><a href="#">Optimizing Pipeline Architecture to Eliminate Lead Leakage</a></h3>
                 <div class="showcase-item-meta">
@@ -39,15 +33,13 @@
                     <span class="meta-context-tag">Illustrative</span>
                 </div>
             </div>
-
             <div class="showcase-item-card">
-                <h3><a href="#">Structuring Role Hierarchies & Sharing Rules for Multi-Territory Sales Teams</a></h3>
+                <h3><a href="#reconciliation-build">Reconciling Multi-Branch Donor & Partner Data Across a National NGO Network</a></h3>
                 <div class="showcase-item-meta">
-                    <span class="meta-context-tag">Salesforce Platform</span>
-                    <span class="meta-context-tag">Illustrative</span>
+                    <span class="meta-context-tag">Salesforce NPSP</span>
+                    <a href="#reconciliation-build" class="action-trigger-link">READ CASE »</a>
                 </div>
             </div>
-
             <div class="showcase-item-card">
                 <h3><a href="#">Automating Client Onboarding with HubSpot-to-Slack Integrations</a></h3>
                 <div class="showcase-item-meta">
@@ -55,11 +47,40 @@
                     <span class="meta-context-tag">Illustrative</span>
                 </div>
             </div>
-
         </section>
-
+        <section id="reconciliation-build" style="margin-bottom: 6rem;">
+            <div class="section-header-label">Illustrative Project — Not a Completed Client Engagement</div>
+            <div class="pattern-panel" style="grid-template-columns: 1fr;">
+                <div>
+                    <h3>Reconciling Multi-Branch Donor & Partner Data Across a National NGO Network</h3>
+                    <p style="color: var(--toe-red); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2rem;">
+                        Built from real, recurring patterns observed across national and pan-African NGOs — not a real client, not real data. Labeled honestly rather than presented as finished work.
+                    </p>
+                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;">The Situation</h4>
+                    <p>
+                        A composite, typical of what shows up across national NGOs with semi-autonomous branches: a secretariat in Abuja running programmes through a dozen-plus state or regional chapters, each reporting on whatever tool was locally available — one branch on spreadsheets, another on a paper log transcribed monthly, a couple on a shared drive with no shared format. A donor reporting deadline arrives, and the secretariat's programme team spends days manually reconciling submissions that don't share field names, date formats, or even currency conventions, before anyone can produce one clean number for a funder.
+                    </p>
+                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">The Architecture</h4>
+                    <p>
+                        Built on Salesforce Non-Profit Success Pack (NPSP), structured around the Household/Organization Account model already native to NPSP — the national secretariat as a parent Account, each branch or partner as a child Account linked through the standard Account hierarchy, so branch-level activity rolls up to a single national view without losing branch-level detail.
+                    </p>
+                    <p>
+                        Programme and grant data sit on custom objects related to each branch Account, rather than living in disconnected spreadsheets — this is what turns "branch X's numbers" into "one filterable slice of the same dataset."
+                    </p>
+                    <p>
+                        Incoming records from branches (via Data Loader or Data Import Wizard for bulk imports) pass through Duplicate and Matching Rules configured on the key identifying fields — donor name, grant ID, reporting period — so records entered inconsistently across branches get flagged or merged rather than silently creating parallel entries. Flow-based validation catches the most common breakage points directly: mismatched date formats, missing required fields, and currency inconsistencies get caught at entry, not at reconciliation time three days before a donor deadline.
+                    </p>
+                    <p>
+                        Reporting sits on top of this as report types and dashboards scoped by branch, region, or donor — giving the secretariat one live, consolidated view instead of a manual roll-up exercise every reporting cycle.
+                    </p>
+                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">What This Would Change</h4>
+                    <p>
+                        Framed as expected outcomes of the architecture, not measured results of a real engagement: reconciliation before a donor report shifts from a manual, multi-day cross-check to a live report anyone on the team can pull. Duplicate donor and grant records stop accumulating silently across branches. And the secretariat gains a single source of truth it can hand to an auditor or funder without needing to explain which spreadsheet is the "real" one.
+                    </p>
+                </div>
+            </div>
+        </section>
     </main>
-
     <footer class="site-footer" id="consult">
         <div>
             <div class="footer-column-title">Communications Network</div>
@@ -73,6 +94,5 @@
             <a href="https://2gney8.share-eu1.hsforms.com/2RWfmfgoYSVKW5AHld2Sk1Q" target="_blank" class="primary-action-button">Initiate System Consult</a>
         </div>
     </footer>
-
 </body>
 </html>
