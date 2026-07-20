@@ -572,7 +572,73 @@ a.brand-title:hover { color: var(--toe-red); }
 
 .insight-card .card-meta { display: flex; align-items: center; justify-content: space-between; }
 
-/* ---------- Footer ---------- */
+/* ---------- Insight article pages ---------- */
+.article-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.article-type-tag {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    color: var(--toe-red);
+}
+
+.article-body h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 2.5rem 0 1rem;
+}
+
+.article-body p,
+.article-body li {
+    font-size: 1.05rem;
+    color: #d1d1d6;
+    font-weight: 300;
+    margin-bottom: 1.25rem;
+    max-width: 760px;
+}
+
+.article-body ul, .article-body ol { margin: 0 0 1.5rem 1.5rem; }
+.article-body li { margin-bottom: 0.6rem; }
+.article-body strong { color: var(--text-primary); font-weight: 600; }
+
+.article-checklist-box {
+    border: 1px solid var(--grid-border);
+    background-color: var(--content-bg);
+    border-left: 3px solid var(--toe-red);
+    padding: 2rem 2.25rem;
+    margin: 2rem 0 2.5rem;
+    max-width: 760px;
+}
+
+.article-checklist-box h4 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--toe-red);
+    margin-bottom: 1rem;
+}
+
+.back-to-insights {
+    display: inline-block;
+    margin-top: 2rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+.back-to-insights:hover { color: var(--toe-red); }
+
+
 footer.site-footer {
     max-width: var(--site-max-width);
     margin: 0 auto 7rem auto;

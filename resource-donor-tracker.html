@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donor & Partner Data Tracker — Jeffrey Uwoghiren</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="brand-title">Jeffrey Uwoghiren</a>
+        <ul class="main-navigation">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="how-we-work.html">How I Work</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li class="active"><a href="insights.html">Insights</a></li>
+            <li><a href="index.html#consult">Consult</a></li>
+        </ul>
+    </header>
+
+    <main class="page-container narrow">
+
+        <section style="margin-bottom: 3rem;">
+            <div class="article-meta-row">
+                <span class="article-type-tag">Free Resource</span>
+                <span class="meta-context-tag">Template · Free</span>
+            </div>
+            <div class="hero-banner-text">Open-Source Notion Workflow: Donor & Partner Data Tracker</div>
+        </section>
+
+        <section class="article-body">
+            <p>
+                A single working table for tracking every branch or partner feeding into your reporting — what format they report in, when they last reported, whether their data has been standardized, and whether it's been checked for duplicates against everything else already in the system. This is the same structure referenced in <a href="article-reconciliation-tax.html" style="color: var(--toe-red);">The Reconciliation Tax</a> — a lightweight way to see, at a glance, exactly where the reconciliation gap actually is before it costs you a reporting cycle.
+            </p>
+
+            <h2>What's in the download</h2>
+            <p>
+                A CSV file, pre-formatted with the columns below and three example rows so you can see it populated before you clear them and add your own branches or partners.
+            </p>
+            <ul>
+                <li><strong>Branch / Partner Name</strong> — who's reporting</li>
+                <li><strong>Contact Person</strong> — who to follow up with directly</li>
+                <li><strong>Region</strong> — for filtering and roll-ups</li>
+                <li><strong>Last Report Received</strong> — the date, so gaps are visible at a glance</li>
+                <li><strong>Reporting Format</strong> — Excel, Google Sheet, PDF, paper log, etc.</li>
+                <li><strong>Currency</strong> — flags conversion work needed before consolidation</li>
+                <li><strong>Standardization Status</strong> — Standardized / Needs Review / Not Standardized</li>
+                <li><strong>Duplicate Check Done</strong> — Yes/No, so nothing gets consolidated twice</li>
+                <li><strong>Notes</strong> — anything a teammate would need to know before touching this row</li>
+            </ul>
+
+            <h2>How to set it up in Notion</h2>
+            <ol>
+                <li>Download the CSV using the button below.</li>
+                <li>In Notion, create a new page and choose <strong>Import → CSV</strong>, then select the file. Notion will build it as a database automatically.</li>
+                <li>Change the <strong>Standardization Status</strong> and <strong>Duplicate Check Done</strong> columns to <strong>Select</strong> and <strong>Checkbox</strong> property types respectively, so they're click-to-update instead of free text.</li>
+                <li>Add a <strong>Board view</strong> grouped by Standardization Status — this becomes your at-a-glance view of which branches or partners still need cleanup work.</li>
+                <li>Add a <strong>Filtered view</strong> for "Last Report Received is more than 30 days ago" to catch branches going quiet before it becomes a reporting-cycle emergency.</li>
+            </ol>
+
+            <div class="article-checklist-box">
+                <h4>Why a tracker like this, not just a bigger spreadsheet</h4>
+                <p style="margin-bottom: 0; max-width: none;">This isn't meant to replace your CRM or become the system of record — it's a lightweight, visible layer that shows the operations team exactly where reconciliation work is needed, before it turns into a scramble against a donor deadline. For the structural fix underneath it — the actual database and automation that keeps this from being a manual tracker in the first place — see <a href="services.html" style="color: var(--toe-red);">CRM Architecture</a>.</p>
+            </div>
+
+            <div style="margin-top: 2.5rem;">
+                <!--
+                    Replace YOUR-TRACKER-FORM-LINK below with the share link from your HubSpot form
+                    (same pattern as the "Initiate System Consult" link in the footer). The form should
+                    collect at least an email address, and a HubSpot workflow enrolled on "form submitted"
+                    should send the automatic email with the template attached or linked.
+                -->
+                <a href="https://YOUR-PORTAL.share-eu1.hsforms.com/YOUR-TRACKER-FORM-LINK" target="_blank" class="primary-action-button">Download the Template</a>
+            </div>
+
+            <a href="insights.html" class="back-to-insights">← Back to Insights</a>
+        </section>
+
+    </main>
+
+    <footer class="site-footer" id="consult">
+        <div>
+            <div class="footer-column-title">Communications Network</div>
+            <div class="footer-directory-links">
+                <a href="mailto:jeffreyuwoghiren@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/jeffrey-uwoghiren-63b48b378/" target="_blank">LinkedIn</a>
+                <a href="https://x.com/Its_Imiefan" target="_blank">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-action-panel">
+            <a href="https://2gney8.share-eu1.hsforms.com/2RWfmfgoYSVKW5AHld2Sk1Q" target="_blank" class="primary-action-button">Initiate System Consult</a>
+        </div>
+    </footer>
+
+</body>
+</html>
