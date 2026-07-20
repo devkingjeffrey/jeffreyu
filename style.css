@@ -699,3 +699,26 @@ footer.site-footer {
     .main-navigation { display: none; }
     header.site-header { padding: 2rem 1.5rem; }
 }
+
+/* ---------- Case Study Figures ---------- */
+.case-study-figure {
+    margin: 2rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.case-study-figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.case-study-figure figcaption {
+    padding: 0.9rem 1.25rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.02em;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
