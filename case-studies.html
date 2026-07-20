@@ -23,20 +23,20 @@
     <main class="page-container">
 
         <section>
-            <div class="hero-banner-text">Illustrative Projects.</div>
+            <div class="hero-banner-text">Selected Work.</div>
         </section>
 
         <div class="page-intro-note">
-            Worked through in detail based on real patterns I've researched.
+            The reconciliation and grant-compliance builds below are illustrative — worked through in detail based on real patterns I've researched, not completed client engagements. Labeled honestly here rather than presented as finished projects. The Teens Church build is real architecture, live and in use.
         </div>
 
-        <section class="showcase-grid-layout" style="margin-bottom: 4rem; grid-template-columns: repeat(3, 1fr);">
+        <section class="showcase-grid-layout" style="margin-bottom: 4rem;">
 
             <div class="showcase-item-card">
-                <h3><a href="#onboarding-build">Automating Multi-Site Staff Onboarding During a Hiring Surge</a></h3>
+                <h3><a href="#">Optimizing Pipeline Architecture to Eliminate Lead Leakage</a></h3>
                 <div class="showcase-item-meta">
                     <span class="meta-context-tag">HubSpot / Automation</span>
-                    <a href="#onboarding-build" class="action-trigger-link">READ CASE »</a>
+                    <span class="meta-context-tag">Illustrative</span>
                 </div>
             </div>
 
@@ -57,26 +57,10 @@
             </div>
 
             <div class="showcase-item-card">
-                <h3><a href="#field-data-build">Secure Field Data Capture Without Reliable Connectivity</a></h3>
-                <div class="showcase-item-meta">
-                    <span class="meta-context-tag">Salesforce Platform</span>
-                    <a href="#field-data-build" class="action-trigger-link">READ CASE »</a>
-                </div>
-            </div>
-
-            <div class="showcase-item-card">
-                <h3><a href="#screening-build">Automated Application Screening for a High-Volume Grant Cycle</a></h3>
+                <h3><a href="#ministry-ops-build">Structuring a Volunteer & Attendance System for a Multi-Unit Church Ministry</a></h3>
                 <div class="showcase-item-meta">
                     <span class="meta-context-tag">Salesforce NPSP</span>
-                    <a href="#screening-build" class="action-trigger-link">READ CASE »</a>
-                </div>
-            </div>
-
-            <div class="showcase-item-card">
-                <h3><a href="#alumni-build">Tracking Alumni & Long-Term Stakeholder Relationships Through Staff Turnover</a></h3>
-                <div class="showcase-item-meta">
-                    <span class="meta-context-tag">Salesforce NPSP</span>
-                    <a href="#alumni-build" class="action-trigger-link">READ CASE »</a>
+                    <a href="#ministry-ops-build" class="action-trigger-link">READ CASE »</a>
                 </div>
             </div>
 
@@ -89,7 +73,7 @@
                 <div>
                     <h3>Reconciling Multi-Branch Donor & Partner Data Across a National NGO Network</h3>
                     <p style="color: var(--toe-red); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2rem;">
-                        Built from real, recurring patterns observed across national and pan-African NGOs
+                        Built from real, recurring patterns observed across national and pan-African NGOs — not a real client, not real data. Labeled honestly rather than presented as finished work.
                     </p>
 
                     <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;">The Situation</h4>
@@ -126,7 +110,7 @@
                 <div>
                     <h3>Milestone-Gated Fund Release for a Multi-Country Grant Cycle</h3>
                     <p style="color: var(--toe-red); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2rem;">
-                        Built from real, recurring patterns observed across grant-making and fellowship-running NGOs
+                        Built from real, recurring patterns observed across grant-making and fellowship-running NGOs — not a real client, not real data. Labeled honestly rather than presented as finished work.
                     </p>
 
                     <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;">The Situation</h4>
@@ -153,137 +137,55 @@
             </div>
         </section>
 
-        <section id="onboarding-build" style="margin-bottom: 6rem;">
-            <div class="section-header-label">Illustrative Project — Not a Completed Client Engagement</div>
+        <section id="ministry-ops-build" style="margin-bottom: 6rem;">
+            <div class="section-header-label">Salesforce NPSP</div>
 
             <div class="pattern-panel" style="grid-template-columns: 1fr;">
                 <div>
-                    <h3>Automating Multi-Site Staff Onboarding During a Hiring Surge</h3>
-                    <p style="color: var(--toe-red); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2rem;">
-                        Built from real, recurring patterns observed across NGOs scaling personnel across multiple sites at once
-                    </p>
+                    <h3>Structuring a Volunteer & Attendance System for Teens Church at The Transforming Church</h3>
 
                     <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;">The Situation</h4>
                     <p>
-                        A composite, typical of an org hiring rapidly across several offices or field sites at once — a central HR lead trying to onboard new staff into multiple locations in parallel, with each site's paperwork, equipment provisioning, and system access requests tracked over email threads. New hires start before their access is ready, HR loses track of who's actually been fully onboarded versus who's still mid-process, and nobody has one place to see status across all sites at a glance.
+                        Teens Church, the youth ministry at The Transforming Church (TTC), runs weekly services across several functional units — Choir, Creative, Media, Music, Prayer, Sound, Ushering — each with its own unit head, sitting under a coordinating team lead. Attendance and segment leadership lived in whoever's head happened to be tracking it that week: a leader counting heads and mentioning the number to someone afterward, no shared record of who led which segment on which date, and no way for the coordinating team to see the whole picture without asking around unit by unit.
                     </p>
 
                     <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">The Architecture</h4>
                     <p>
-                        Built on HubSpot, using a custom onboarding pipeline (built on Deals or a custom object, depending on the account tier) with a stage for every step of the process — offer signed, documentation received, IT/systems access requested, site orientation scheduled, fully onboarded. Each stage change triggers a Workflow that automatically notifies the relevant party — IT when access needs provisioning, the site lead when someone's ready for orientation — instead of HR manually chasing each handoff by email.
-                    </p>
-                    <p>
-                        A Slack integration mirrors key stage changes into a shared onboarding channel, so anyone on the team can see status in real time without opening HubSpot directly — the same "default to open and visual" principle that shows up elsewhere in how the org already wants to operate.
-                    </p>
-                    <p>
-                        A simple dashboard rolls up onboarding status by site, giving HR one view of exactly who's stuck at which stage across every location, instead of reconstructing that picture from separate email threads each time someone asks.
+                        Built on Salesforce NPSP, with a Role Hierarchy modeled directly on Teens Church's actual leadership structure — CEO at the top, a Team Lead Teens role beneath it, and each unit head (Choir, Creative, Media, Music, Prayer, Sound, Ushering) reporting into that. Record visibility follows the real chain of leadership instead of defaulting to flat or over-permissioned access.
                     </p>
 
-                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">What This Would Change</h4>
+                    <figure class="case-study-figure">
+                        <img src="case-study-images/teens-church-role-hierarchy.png" alt="Role Hierarchy for Teens Church, showing Team Lead Teens above the seven unit head roles">
+                        <figcaption>The Role Hierarchy modeled on Teens Church's actual leadership structure.</figcaption>
+                    </figure>
                     <p>
-                        Framed as expected outcomes of the architecture, not measured results of a real engagement: new hires stop starting before their access and equipment are ready, because the workflow surfaces the gap automatically instead of relying on someone remembering to follow up. HR gains one live view across all sites instead of piecing status together from inboxes. And the handoffs between HR, IT, and site leads happen on a system-enforced trigger, not a manually-sent email that might get missed during a hiring surge.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section id="field-data-build" style="margin-bottom: 6rem;">
-            <div class="section-header-label">Illustrative Project — Not a Completed Client Engagement</div>
-
-            <div class="pattern-panel" style="grid-template-columns: 1fr;">
-                <div>
-                    <h3>Secure Field Data Capture Without Reliable Connectivity</h3>
-                    <p style="color: var(--toe-red); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2rem;">
-                        Built from real, recurring patterns observed across NGOs collecting sensitive data in the field
+                        Church Services, Attendance, and Service Segments sit as related objects off the standard Contact record, so a segment leader, a service date, and an attendee are all connected rather than living as separate lists. A public-facing Screen Flow lets someone log their own attendance directly — it searches for a matching Contact, matches it against the current Church Service, and creates the Attendance record automatically, instead of routing through whoever happens to be holding a clipboard that day.
                     </p>
 
-                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;">The Situation</h4>
+                    <figure class="case-study-figure">
+                        <img src="case-study-images/teens-church-attendance-flow.png" alt="Flow Builder screen showing the Create Attendance Record step, mapping Church Service and Attendee fields">
+                        <figcaption>The Screen Flow behind self-service attendance — matches an existing Contact and Church Service before creating the Attendance record.</figcaption>
+                    </figure>
                     <p>
-                        A composite, typical of an org whose field staff collect sensitive case data — protection intake, legal casework, health records — in locations with unreliable internet, sometimes none at all. Today that means paper forms photographed and messaged in later, or a spreadsheet filled in from memory once someone's back at the office with signal. Details get lost or misremembered in the gap, and sensitive information sits unprotected on a phone's camera roll or a messaging app in the meantime.
+                        Sharing Rules extend read access to specific roles — a Cross-Unit Coordinator, for instance, sees Church Service records owned across the whole Team Lead Teens hierarchy — without opening those objects org-wide. Permission Sets scope field-level access per object (the Teens Church Leader profile gets exactly the fields their role needs on Church Services, no more), rather than leaning on broad, catch-all profile permissions.
                     </p>
 
-                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">The Architecture</h4>
+                    <figure class="case-study-figure">
+                        <img src="case-study-images/teens-church-permission-sets.png" alt="Permission Set field-level security configuration for the Church Services object">
+                        <figcaption>Field-level permissions scoped per object through a dedicated Permission Set.</figcaption>
+                    </figure>
                     <p>
-                        Built using the Salesforce Mobile App with offline-capable forms — field staff fill in a structured record on their phone or tablet exactly as they would on paper, but the data is captured as clean, structured fields from the start rather than free text to be re-typed later. The device stores the record locally when there's no signal, and syncs automatically the moment a connection is available — no manual re-entry step, and nothing sits exposed in a messaging app while it waits to reach the system.
-                    </p>
-                    <p>
-                        Field-level security and permission sets restrict who can see sensitive record types, so a case file is only visible to the people who actually need it — a basic but often-skipped control when data collection happens under time pressure in the field.
-                    </p>
-                    <p>
-                        Once synced, the same record structure feeds directly into whatever reporting or case-tracking view the org already relies on, so field data doesn't need a separate manual transcription step to become usable centrally.
+                        A "Teens Church Cockpit" dashboard sits on the home page — attendance by service and gender, active segments and who's leading them — live the moment a leader or coordinator logs in.
                     </p>
 
-                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">What This Would Change</h4>
-                    <p>
-                        Framed as expected outcomes of the architecture, not measured results of a real engagement: field staff capture cleaner data on the spot instead of reconstructing it from memory hours later. Sensitive records stay inside a permissioned system instead of living temporarily in a camera roll or chat thread. And headquarters gets usable, structured data the moment a device reconnects, instead of waiting on someone to manually transcribe a stack of photographed forms.
-                    </p>
-                </div>
-            </div>
-        </section>
+                    <figure class="case-study-figure">
+                        <img src="case-study-images/teens-church-cockpit-dashboard.png" alt="Teens Church Cockpit dashboard showing the Master Attendance Report and Active Segments Led by Leader">
+                        <figcaption>The Teens Church Cockpit — attendance and segment leadership visible on login, no report to go build.</figcaption>
+                    </figure>
 
-        <section id="screening-build" style="margin-bottom: 6rem;">
-            <div class="section-header-label">Illustrative Project — Not a Completed Client Engagement</div>
-
-            <div class="pattern-panel" style="grid-template-columns: 1fr;">
-                <div>
-                    <h3>Automated Application Screening for a High-Volume Grant Cycle</h3>
-                    <p style="color: var(--toe-red); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2rem;">
-                        Built from real, recurring patterns observed across NGOs running large-scale grant cycles, fellowships, and mentorship programs
-                    </p>
-
-                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;">The Situation</h4>
+                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">What Changed</h4>
                     <p>
-                        A composite, typical of an org running an annual grant cycle, fellowship, or mentorship program that draws thousands of applications. Every cycle, a small program team manually opens each submission to check basic eligibility — right country, right sector, required documents attached, budget within range — before anyone with real judgment even sees it. Reviewers' time goes to sorting instead of evaluating, and the cycle takes weeks longer than it should before a shortlist exists.
-                    </p>
-
-                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">The Architecture</h4>
-                    <p>
-                        Built on Salesforce NPSP, with applications captured directly into the system through a web-to-lead style form rather than arriving as email attachments to be manually logged. A Flow runs an initial eligibility check against the structured fields the moment a submission comes in — required documents present, eligibility criteria met, budget within stated bounds — and automatically routes anything that fails a hard criterion to a rejection queue with the reason attached, rather than a reviewer discovering it three steps into reading the file.
-                    </p>
-                    <p>
-                        Everything that passes the initial check lands in a reviewer queue, assigned automatically by sector or region using assignment rules, so applications get distributed evenly instead of piling up with whoever happens to check their inbox first.
-                    </p>
-                    <p>
-                        For programs that need mentor/mentee or reviewer/applicant matching specifically, the same structured data — sector, seniority, stated goals — feeds a simple scoring or filtering view that surfaces the closest matches, cutting down the manual cross-referencing that pairing usually requires.
-                    </p>
-
-                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">What This Would Change</h4>
-                    <p>
-                        Framed as expected outcomes of the architecture, not measured results of a real engagement: reviewers spend their time judging genuinely eligible applications instead of screening out ones that were never going to qualify. The shortlist stage starts sooner because eligibility is checked the moment a form is submitted, not batched into a manual review pass weeks later. And every rejected applicant has a clear, consistent reason on file, rather than an inconsistent judgment call made under time pressure.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section id="alumni-build" style="margin-bottom: 6rem;">
-            <div class="section-header-label">Illustrative Project — Not a Completed Client Engagement</div>
-
-            <div class="pattern-panel" style="grid-template-columns: 1fr;">
-                <div>
-                    <h3>Tracking Alumni & Long-Term Stakeholder Relationships Through Staff Turnover</h3>
-                    <p style="color: var(--toe-red); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2rem;">
-                        Built from real, recurring patterns observed across NGOs running leadership programs, fellowships, and alumni networks
-                    </p>
-
-                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem;">The Situation</h4>
-                    <p>
-                        A composite, typical of an org running a leadership program, fellowship, or long-standing donor network where the real value is in relationships tracked over years, not months. The person who knew "this graduate moved into a policy role two years after the program" or "this donor's last three gifts were tied to a specific project" leaves the org, and that context leaves with them — because it lived in their personal notes or memory, not in a shared system. A funder asks for multi-year impact evidence, and the answer depends on who's still around to remember it.
-                    </p>
-
-                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">The Architecture</h4>
-                    <p>
-                        Built on Salesforce NPSP, using the standard Contact and Relationship objects to track not just a person's basic details but their ongoing story — career moves, engagement history, gift history, program milestones — all logged as Activities or custom timeline records tied to their Contact record, rather than living in one staff member's inbox or notebook.
-                    </p>
-                    <p>
-                        Simple automation (Flow-based reminders) prompts staff to log a check-in or update after key touchpoints — a conference encounter, a career update heard secondhand, a renewed gift — so the record stays current without depending on any one person's memory or diligence.
-                    </p>
-                    <p>
-                        Reporting rolls this up into a longitudinal view — career trajectories across a cohort, gift patterns across years — that a program director can pull directly, instead of reconstructing it by asking around the office.
-                    </p>
-
-                    <h4 style="color: var(--toe-red); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; margin: 2rem 0 1rem;">What This Would Change</h4>
-                    <p>
-                        Framed as expected outcomes of the architecture, not measured results of a real engagement: institutional memory survives staff turnover because it lives in the system, not in someone's head. Multi-year impact evidence becomes a report you can generate on demand instead of a research project every time a funder asks. And relationship history stops depending on which staff member happens to remember a particular donor or graduate.
+                        Attendance capture moved from someone remembering to relay a headcount to leaders logging it themselves, in the moment, from their own device. Leadership visibility became something the system shows rather than something a coordinator has to reconstruct by asking each unit head individually. And a question like "how many people came through last week, and who led which segment" now resolves to a report anyone with access can pull.
                     </p>
                 </div>
             </div>
