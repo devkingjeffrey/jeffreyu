@@ -133,29 +133,29 @@ a.brand-title:hover { color: var(--toe-red); }
 
 .home-hero-overlay h1 {
     font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-    font-size: 3.25rem;
+    font-size: 1.9rem;
     font-weight: 800;
     letter-spacing: -0.02em;
     line-height: 1.1;
-    margin-bottom: 1.1rem;
+    margin-bottom: 0.85rem;
 }
 
 .home-hero-overlay p {
-    font-size: 1.15rem;
+    font-size: 0.9rem;
     font-weight: 300;
     color: #e5e5ea;
-    max-width: 480px;
+    max-width: 420px;
 }
 
 /* Slide-in on page load/refresh */
 .hero-slide-in {
     opacity: 0;
     transform: translateY(24px);
-    animation: heroSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: heroSlideIn 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .hero-slide-in-1,
-.hero-slide-in-2 { animation-delay: 0.1s; }
+.hero-slide-in-2 { animation-delay: 0.2s; }
 
 @keyframes heroSlideIn {
     to {
@@ -175,7 +175,7 @@ a.brand-title:hover { color: var(--toe-red); }
 @media (max-width: 960px) {
     .home-hero { min-height: 420px; }
     .home-hero-overlay { padding: 2.5rem 1.5rem 3rem 1.5rem; }
-    .home-hero-overlay h1 { font-size: 2.25rem; }
+    .home-hero-overlay h1 { font-size: 1.6rem; }
 }
 
 /* ---------- Profile / About split ---------- */
